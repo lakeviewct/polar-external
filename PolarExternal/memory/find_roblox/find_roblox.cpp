@@ -11,10 +11,10 @@ PROCESSENTRY32W FindRobloxProc()
 	// -----------
 
 	snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-	if (snapshot == INVALID_HANDLE_VALUE)
-	{
-		return {};
-	}
+		if (snapshot == INVALID_HANDLE_VALUE)
+		{
+			return {};
+		}
 
 	current_process.dwSize = sizeof(current_process);
 
@@ -63,6 +63,11 @@ uint64_t FindRobloxBase()
 	roblox_pid = roblox_process.th32ProcessID;
 
 	module_snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, roblox_pid);
+		if (module_snapshot == INVALID_HANDLE_VALUE)
+		{
+			return 0;
+		}
+
 	module_entry.dwSize = sizeof(module_entry);
 
 	// ----------
