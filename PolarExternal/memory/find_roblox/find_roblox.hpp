@@ -9,3 +9,4 @@
 	// find_roblox.cpp
 PROCESSENTRY32W FindRobloxProc();
 DWORD FindRobloxPID();
+uint64_t FindRobloxBase();
