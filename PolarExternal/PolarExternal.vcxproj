@@ -123,11 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="find_roblox.cpp" />
+    <ClCompile Include="memory\find_roblox\find_roblox.cpp" />
     <ClCompile Include="PolarExternal.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="find_roblox.hpp" />
+    <ClInclude Include="memory\find_roblox\find_roblox.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
