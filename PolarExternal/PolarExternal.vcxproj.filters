@@ -13,10 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\memory">
+      <UniqueIdentifier>{158baac0-9ae1-4fef-9d3f-98a637e9fbba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\memory\find_roblox">
+      <UniqueIdentifier>{5c03194e-a11b-4f32-b9d4-7f9fc72dfcab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PolarExternal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="find_roblox.cpp">
+      <Filter>Source Files\memory\find_roblox</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="find_roblox.hpp">
+      <Filter>Source Files\memory\find_roblox</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
