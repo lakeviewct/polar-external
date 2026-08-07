@@ -20,12 +20,12 @@ PROCESSENTRY32W FindRobloxProc()
 
 	// -----------
 
-	if (Process32FirstW(snapshot, &current_process));
+	if (Process32FirstW(snapshot, &current_process))
 	{
 		do
 		{
 			// compare name of current process with L"RobloxPlayerBeta.exe"
-			if (_wcsicmp(current_process.szExeFile, L"RobloxPlayerBeta.exe") == false)
+			if (_wcsicmp(current_process.szExeFile, L"RobloxPlayerBeta.exe") == 0)
 			{
 				CloseHandle(snapshot);
 				return current_process;
@@ -76,7 +76,7 @@ uint64_t FindRobloxBase()
 
 	while (search)
 	{
-		if (wcsicmp(module_entry.szModule, L"RobloxPlayerBeta.exe") == false)
+		if (wcsicmp(module_entry.szModule, L"RobloxPlayerBeta.exe") == 0)
 		{
 			roblox_base_address = reinterpret_cast<uint64_t>(module_entry.modBaseAddr);
 			CloseHandle(module_snapshot);
