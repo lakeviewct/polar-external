@@ -24,13 +24,25 @@
     <ClCompile Include="PolarExternal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="find_roblox.cpp">
-      <Filter>Source Files\memory\find_roblox</Filter>
+    <ClCompile Include="memory\utils\find_roblox\find_roblox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\utils\read_write\memory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\utils\open_process\open_process.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="find_roblox.hpp">
-      <Filter>Source Files\memory\find_roblox</Filter>
+    <ClInclude Include="memory\utils\find_roblox\find_roblox.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\utils\read_write\memory.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\utils\open_process\open_process.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

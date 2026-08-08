@@ -5,5 +5,5 @@
 void mem::init()
 {
 	pid = FindRobloxPID();
-	base_address = FindRoblox_Base();
+	base_address = FindRobloxBase();
 }
