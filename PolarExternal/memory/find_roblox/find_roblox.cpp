@@ -76,7 +76,7 @@ uint64_t FindRobloxBase()
 
 	while (search)
 	{
-		if (wcsicmp(module_entry.szModule, L"RobloxPlayerBeta.exe") == 0)
+		if (_wcsicmp(module_entry.szModule, L"RobloxPlayerBeta.exe") == 0)
 		{
 			roblox_base_address = reinterpret_cast<uint64_t>(module_entry.modBaseAddr);
 			CloseHandle(module_snapshot);
