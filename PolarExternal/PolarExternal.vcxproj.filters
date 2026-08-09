@@ -33,6 +33,9 @@
     <ClCompile Include="memory\utils\open_process\open_process.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="memory\utils\find_datamodel\find_datamodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="memory\utils\find_roblox\find_roblox.hpp">
@@ -42,6 +45,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="memory\utils\open_process\open_process.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\utils\find_datamodel\find_datamodel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="misc_headers\offsets.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
