@@ -7,6 +7,7 @@ PROCESSENTRY32W FindRobloxProc()
 	HANDLE snapshot;
 
 	PROCESSENTRY32W current_process{};
+	bool search;
 	
 	// -----------
 
@@ -17,26 +18,28 @@ PROCESSENTRY32W FindRobloxProc()
 		}
 
 	current_process.dwSize = sizeof(current_process);
+	search = Process32FirstW(snapshot, &current_process);
 
 	// -----------
 
-	if (Process32FirstW(snapshot, &current_process))
+	while (search)
 	{
-		do
+		// compare name of current process with L"RobloxPlayerBeta.exe"
+		if (_wcsicmp(current_process.szExeFile, L"RobloxPlayerBeta.exe") == 0)
 		{
-			// compare name of current process with L"RobloxPlayerBeta.exe"
-			if (_wcsicmp(current_process.szExeFile, L"RobloxPlayerBeta.exe") == 0)
-			{
-				CloseHandle(snapshot);
-				return current_process;
-			}
-		} while (Process32NextW(snapshot, &current_process));
+			CloseHandle(snapshot);
+			return current_process;
+		}
+		else
+		{
+			search = Process32NextW(snapshot, &current_process);
+		}
 	}
 
 	// -----------
 
 	CloseHandle(snapshot);
-	return current_process;
+	return {};
 }
 
 DWORD FindRobloxPID()

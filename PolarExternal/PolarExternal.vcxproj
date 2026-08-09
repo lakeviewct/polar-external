@@ -123,13 +123,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="memory\find_roblox\find_roblox.cpp" />
-    <ClCompile Include="memory\read\memory.cpp" />
+    <ClCompile Include="memory\utils\find_datamodel\find_datamodel.cpp" />
+    <ClCompile Include="memory\utils\find_roblox\find_roblox.cpp" />
+    <ClCompile Include="memory\utils\open_process\open_process.cpp" />
+    <ClCompile Include="memory\utils\read_write\memory.cpp" />
     <ClCompile Include="PolarExternal.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="memory\find_roblox\find_roblox.hpp" />
-    <ClInclude Include="memory\read\memory.hpp" />
+    <ClInclude Include="memory\utils\find_datamodel\find_datamodel.hpp" />
+    <ClInclude Include="memory\utils\find_roblox\find_roblox.hpp" />
+    <ClInclude Include="memory\utils\open_process\open_process.hpp" />
+    <ClInclude Include="memory\utils\read_write\memory.hpp" />
+    <ClInclude Include="misc_headers\offsets.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
