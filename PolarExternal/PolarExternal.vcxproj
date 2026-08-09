@@ -43,7 +43,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -102,9 +102,11 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\TheBigCIZ\Desktop\PolarExternal\ext;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -123,18 +125,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="memory\utils\find_datamodel\find_datamodel.cpp" />
-    <ClCompile Include="memory\utils\find_roblox\find_roblox.cpp" />
-    <ClCompile Include="memory\utils\open_process\open_process.cpp" />
-    <ClCompile Include="memory\utils\read_write\memory.cpp" />
-    <ClCompile Include="PolarExternal.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="game\game.h" />
     <ClInclude Include="memory\utils\find_datamodel\find_datamodel.hpp" />
-    <ClInclude Include="memory\utils\find_roblox\find_roblox.hpp" />
-    <ClInclude Include="memory\utils\open_process\open_process.hpp" />
+    <ClInclude Include="utils\logging\log.h" />
+    <ClInclude Include="utils\memory\memory.h" />
     <ClInclude Include="memory\utils\read_write\memory.hpp" />
     <ClInclude Include="misc_headers\offsets.hpp" />
+    <ClInclude Include="sdk\offsets.h" />
+    <ClInclude Include="sdk\sdk.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PolarExternal.cpp" />
+    <ClCompile Include="sdk\sdk.cpp" />
+    <ClCompile Include="utils\logging\log.cpp" />
+    <ClCompile Include="utils\memory\memory.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
